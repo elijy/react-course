@@ -5,3 +5,33 @@
   appear Must set transitionAppear={true} on animation component
 */
 
+.order-enter
+  background red
+  transform: translateX(-120%)
+  transition 0.5s
+  &.order-enter-active
+    background yellow
+    transform: translateX(0);
+
+.order-exit
+  transform: translateX(0)
+  transition: 0.5s
+  &.order-exit-active
+    background: goldenrod
+    transform: translateX(120%)
+
+.count-enter
+  background green
+  transform translateY(100%);
+  transition: 0.5s
+  &.count-enter-active
+    transform: translateY(0);
+
+.count-exit
+  transform translateY(0);
+  transition: 0.5s
+  position: absolute;
+  left: 0
+  &.count-exit-active
+    background: red
+    transform: translateY(-100%);
