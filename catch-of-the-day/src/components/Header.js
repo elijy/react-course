@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Header = props => {
   return (
     <header className="top">
       <h1>
-        Catch 
+        Catch
         <span className="ofThe">
           <span className="of">Of</span>
           <span className="the">Le</span>
@@ -14,6 +15,10 @@ const Header = props => {
       <h3 className="tagline"><span>{props.tagline}</span></h3>
     </header>
   )
+}
+
+Header.propTypes = {
+  tagline: PropTypes.string.isRequired
 }
 
 export default Header;

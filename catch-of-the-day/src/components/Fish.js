@@ -1,8 +1,19 @@
 import React from 'react';
 import { formatPrice } from '../helpers.js';
+import PropTypes from 'prop-types';
 
 
 class Fish extends React.Component {
+  static propTypes = {
+    details: PropTypes.shape({
+      status: PropTypes.string,
+      image: PropTypes.string,
+      name: PropTypes.string,
+      description: PropTypes.string,
+      price: PropTypes.number,
+    }),
+    addToOrder: PropTypes.func
+  }
   render() {
     // We can pull out the this.props shit to save time
     const {details} = this.props;
